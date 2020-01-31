@@ -1,9 +1,30 @@
 
-function Game()
+function Game(gameDiv, gameData)
 {
     var self = this;
 
-    
+    var state = null;
+    var layersDiv = gameDiv.querySelector("#layers");
+
+    function addLayer(name,src){
+        return new Promise((resolve, reject) => {
+          let img = new Image();
+          img.onload = () => resolve(img.height);
+          img.onerror = reject;
+          img.src = src;
+          img.id='layer-'+name;
+          img.classList.add('layer');
+          layersDiv.append(img);
+        });
+      }
+
+    self.bootstrap = async function()
+    {
+        for (const name in gameData.art) {
+            const src = gameData.art[name];
+            await addLayer(name,src);
+        }
+    }
 
     return self;
 }
@@ -11,14 +32,15 @@ function Game()
 async function launch()
 {
     window.gameData = await getJson('/data');
-    window.game = new Game(window.gameData);
+    var gameDiv = document.getElementById('game');
+    window.game = new Game(gameDiv, window.gameData);
+    await window.game.bootstrap();
 }
 
 function start()
 {
     launch();
 }
-
 
 window.getJson = async function(url)
 {
@@ -28,7 +50,6 @@ window.getJson = async function(url)
         return await response.json(); // parses JSON response into native JavaScript objects
     } else {
         console.error(response);
-        window.app.onError(response);
         throw response.status;
     }
 }
@@ -53,7 +74,6 @@ window.postData = async function (url, data) {
         return await response.json(); // parses JSON response into native JavaScript objects
     } else {
         console.error(response);
-        window.app.onError(response);
         throw response.status;
     }
 }
