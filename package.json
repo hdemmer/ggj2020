@@ -1,0 +1,17 @@
+{
+  "name": "ggj2020",
+  "version": "1.0.0",
+  "description": "Global Game Jam 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdemmer/ggj2020.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hdemmer/ggj2020/issues"
+  },
+  "homepage": "https://github.com/hdemmer/ggj2020#readme"
+}
