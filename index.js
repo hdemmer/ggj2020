@@ -10,17 +10,35 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'static')));
 
+function parseLines(text)
+{
+  var rawLines = text.split('\n');
+  var lines = [];
+  for (const i in rawLines) {
+    var line = rawLines[i];
+    line = line.replace(/\n/g,'');
+    if (line == '' || line.startsWith('#'))
+    {
+      continue;
+    }
+    lines.push(line);
+  }
+
+  return lines;
+}
+
 async function compileGameData()
 {
   const SRC = 'src';
   var srcFiles = await readdir(SRC);
+  var start = 'intro';
   var passages = {};
   for (const i in srcFiles) {
     var fileName = srcFiles[i];
     var key = fileName.replace(/\.txt$/,'');
     var buffer = await readfile(SRC+'/'+fileName);
-    var text = buffer.toString();
-    passages[key] = {text:text};
+    var lines = parseLines(buffer.toString());
+    passages[key] = lines;
   }
 
   var artFiles = await readdir('static/art');
@@ -31,7 +49,7 @@ async function compileGameData()
     var path = '/art/'+fileName;
     art[key] = path;
   }
-  return {passages, art};
+  return {passages, art, start};
 }
 
 app.get('/data', async function(req,res){ 
