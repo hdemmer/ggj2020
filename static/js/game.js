@@ -3,8 +3,50 @@ function Game(gameDiv, gameData)
 {
     var self = this;
 
-    var state = null;
+    self.queue = [];
     var layersDiv = gameDiv.querySelector("#layers");
+    var layers = [];
+    var optionsDiv = gameDiv.querySelector('#options');
+    optionsDiv.addEventListener("click", forwardClick);
+    gameDiv.addEventListener("click", forwardClick);
+
+    var inTimeout = false;
+
+    function chooseOption(option)
+    {
+        var line = self.queue.shift();
+        console.log(line);
+        if (line.toUpperCase().startsWith('SCENE:'))
+        {
+            var layerName = line.substring('SCENE:'.length);
+            layerName = layerName.replace(/ /g,'');
+            showLayer(layerName);
+            chooseOption(-1);
+        } else {
+            optionsDiv.innerHTML = line;
+        }
+    }
+
+    function forwardClick()
+    {
+        if (inTimeout) { return; }
+        inTimeout = true;
+        setTimeout(()=>{inTimeout = false},300);
+        chooseOption(-1);
+    }
+
+    function showLayer(name)
+    {
+        layers.forEach((l)=>{
+            // console.log('hide: ' + l.id)
+            var cl = l.classList;
+            cl.remove('visible');
+            cl.add('hidden');
+        });
+        var icl = layersDiv.querySelector('#'+name).classList;
+        icl.add('visible');
+        icl.remove('hidden');
+    }
 
     function addLayer(name,src){
         return new Promise((resolve, reject) => {
@@ -12,9 +54,11 @@ function Game(gameDiv, gameData)
           img.onload = () => resolve(img.height);
           img.onerror = reject;
           img.src = src;
-          img.id='layer-'+name;
+          img.id=name;
           img.classList.add('layer');
+          img.classList.add('hidden');
           layersDiv.append(img);
+          layers.push(img);
         });
       }
 
@@ -24,6 +68,10 @@ function Game(gameDiv, gameData)
             const src = gameData.art[name];
             await addLayer(name,src);
         }
+
+        var startScript = gameData.passages[gameData.start];
+        self.queue = startScript;
+        chooseOption(-1);
     }
 
     return self;
@@ -35,6 +83,7 @@ async function launch()
     var gameDiv = document.getElementById('game');
     window.game = new Game(gameDiv, window.gameData);
     await window.game.bootstrap();
+    document.getElementById('loading').classList.add('hidden');
 }
 
 function start()

@@ -6,11 +6,31 @@ body
     font-family: 'Architects Daughter', cursive;
     font-size: 48px;
     color:#fff;
+    user-select: none;
 }
 
 .title
 {
     font-family: 'Griffy', cursive;
+    font-size: 500%;
+}
+
+.loading
+{
+    background-color: #000;
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    top:0;
+    left:0;
+    z-index: 10000;
+}
+
+.loading .title
+{
+    position: absolute;
+    top: 540px;
+    left: 700px;
 }
 
 .game
@@ -42,5 +62,16 @@ body
     padding:50px;
     border: 0px solid transparent;
     border-radius: 45px;
-    backdrop-filter: blur(28px);
+    backdrop-filter: blur(16px);
 }
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }

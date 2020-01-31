@@ -1,0 +1,17 @@
+SCENE: Intro_01_A
+
+DAD: “Hey Sammy. I know these past years have been hard on you. But I won't be here for much longer to guide you.”
+SAMMY: “But Dad…! I don't know what to do without you. I´m just so lost.”
+DAD: “You still have your mother and your sister… and Gramps.”
+SAMMY: “NO! No, I´ll never ever talk to them again! And I'm pretty sure they won't talk to me either.”
+DAD: “I know it hurts, but you need to go and see them after I´m gone. Each of you had their fair share of sorrow in your lives. You need to understand what made them do the things each of them did to you. DOT will help you.”
+SAMMY: “But it is just a robot. And it's not even finished yet! How should that help me with THEM?!”
+DAD: “Oh, but DOT is perfect. In it's own way. You just need the other parts to fix it.”
+SAMMY: “The other parts?”
+DAD: “Yes. Listen to your heart. See the sorrow of your family with your own eyes and you will find the other parts…”
+
+SCENE: Intro_01_B
+SAMMY: Dad ... Dad?
+
+SCENE: Intro_02
+SAMMY: DOT ...
