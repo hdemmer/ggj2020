@@ -1,0 +1,24 @@
+
+SCENE: Mom_backround
+
+CHAR: Sammy_01
+Sammy: “Hey Mom, it's me… Sammy.”
+
+CHAR: Mom_01
+Mom: “What do you want?”
+
+CHAR: Sammy_01
+Sammy: “Dad made me promise to talk to you. So here I am.”
+
+CHAR: Mom_02
+Mom: “Ummm okay… so how have you been all this time?”
+
+CHAR: Sammy_01
+Sammy: “Good. As long as Dad was there at least.”
+
+CHAR: Mom_01
+Mom: “... Do you want some tea? I made some for you. Do you need something to eat? I could fix you something… Ahh, What were we just talking about?” 
+
+OPTIONS:
+→ “Yes some tea would be nice. Thank you.”|mom_some_tea
+→ “I told you how i´ve been. Well, now he's gone…”|mom_hes_gone

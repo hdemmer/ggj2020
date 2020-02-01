@@ -15,5 +15,5 @@ SAMMY: “But where should I start?”
 
 OPTIONS:
 → Go talk to Grandpa|grandpa_start
-→ Go to Mom|
-→ Meet Max on campus|
+→ Go to Mom|mom_start
+→ Meet Jules on campus|jules_start

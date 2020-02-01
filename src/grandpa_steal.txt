@@ -1,0 +1,7 @@
+SCENE: Grandpa_Backround
+
+CHAR: Grandpa_leave
+
+WAIT:
+
+GOTO: home
