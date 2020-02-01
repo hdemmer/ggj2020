@@ -8,6 +8,9 @@ function Game(gameDiv, gameData, state)
     self.queue = [];
     var layersDiv = gameDiv.querySelector("#layers");
     var layers = [];
+    var audioDiv= gameDiv.querySelector("#audio");;
+    var audioElements = {};
+    var audioLevels = {};
     var optionsDiv = gameDiv.querySelector('#options');
     optionsDiv.addEventListener("click", forwardClick);
     gameDiv.addEventListener("click", forwardClick);
@@ -66,7 +69,9 @@ function Game(gameDiv, gameData, state)
             var layerName = param;
             showLayer(CHAR,layerName);
             chooseOption(-1);
-        } else if (cmd=='GOTO'){
+        } else if (cmd == 'MUSIC') {
+            playMusic(param);
+        }else if (cmd=='GOTO'){
             self.queue = [];
             self.queueScript(param);
             chooseOption(-1);
@@ -120,6 +125,58 @@ function Game(gameDiv, gameData, state)
         });
       }
 
+    function addAudio(name,src) {
+        var audioElement = new Audio(src);
+        audioElement.loop = true;
+        audioElements[name] = audioElement;
+        audioLevels[name] = 0;
+        audioDiv.append(audioElement);
+    }
+
+    var isRunningAudioUpdate = false;
+    function audioUpdate()
+    {
+        isRunningAudioUpdate = true;
+        for (var key in audioElements)
+        {
+            var audioElement = audioElements[key];
+            var targetVolume = audioLevels[key];
+            if (audioElement)
+            {
+                var vol = audioElement.volume;
+                if (vol < targetVolume)
+                {
+                    vol += 0.01;
+                } else if (vol > targetVolume)
+                {
+                    vol -= 0.01;
+                }
+                if (vol < 0) { vol = 0; }
+                if (vol > 1) { vol = 1; }
+                audioElement.volume = vol;
+            }
+        }
+        setTimeout(audioUpdate,10);
+    }
+
+    function playMusic(name)
+    {
+        console.log('playing music: ' + name);
+        for (var key in audioElements)
+        {
+            if (key != name)
+            {
+                audioLevels[key] = 0;
+            };
+        }
+        audioLevels[name] = 1;
+        audioElements[name].play();
+        if (!isRunningAudioUpdate)
+        {
+            audioUpdate();
+        }
+    }
+
     self.queueScript = function(scriptName)
     {
         var script = gameData.passages[scriptName];
@@ -131,6 +188,11 @@ function Game(gameDiv, gameData, state)
         for (const name in gameData.art) {
             const src = gameData.art[name];
             await addLayer(name,src);
+        }
+
+        for (const name in gameData.music) {
+            const src = gameData.music[name];
+            await addAudio(name,src);
         }
 
         self.queueScript(gameData.start);

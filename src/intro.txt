@@ -1,4 +1,10 @@
+SCENE: start_backdrop
+
+Play D.O.T.
+
 SCENE: Intro_01_A
+
+MUSIC: song18
 
 DAD: “Hey Sammy. I know these past years have been hard on you. But I won't be here for much longer to guide you.”
 SAMMY: “But Dad…! I don't know what to do without you. I´m just so lost.”

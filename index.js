@@ -52,7 +52,17 @@ async function compileGameData()
     var path = '/art/'+fileName;
     art[key] = path;
   }
-  return {passages, art, start};
+
+  var musicFiles = await readdir('static/music');
+  var music = {};
+  for (const i in musicFiles) {
+    var fileName = musicFiles[i];
+    var key = fileName.replace(/\.mp3$/,'');
+    var path = '/music/'+fileName;
+    music[key] = path;
+  }
+
+  return {start, passages, art, music};
 }
 
 app.get('/data', async function(req,res){ 
