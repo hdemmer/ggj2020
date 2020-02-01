@@ -102,7 +102,10 @@ function Game(gameDiv, gameData, state)
     {
         if (self.queue.length == 0)
         {
-            // TODO: game over
+            // game over
+            self.state = {};
+            self.queueScript(gameData.start);
+            
             return;
         }
         var line = self.queue.shift();

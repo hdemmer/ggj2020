@@ -1,0 +1,5 @@
+SCENE: Good_Ending
+CHAR:
+
+WAIT:
+

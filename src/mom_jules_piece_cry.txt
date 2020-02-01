@@ -10,7 +10,7 @@ Sammy: “Hey! For once in your life listen!“
 SCENE: black
 CHAR:
 
-WAIT: 800
+WAIT: 2000
 
 SCENE: Mom_talk
 

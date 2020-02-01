@@ -12,4 +12,4 @@ WAIT: 1000
 
 SCENE: black
 
-# TODO: all bad ending
+GOTO: all_bad

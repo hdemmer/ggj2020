@@ -8,9 +8,14 @@ DOT_JULES: grandpa_jules
 DOT_MOM: grandpa_mom
 
 CHAR: Sammy_01
-SAMMY: “I ...”
+Sammy: “Grandpa, I ...”
 
 CHAR: Grandpa_01
-GRANDPA: “Go away, I'm cranky today anyway.”
+Grandpa: “Go away, I'm cranky today anyway.”
+
+SCENE: black
+CHAR:
+
+WAIT: 1000
 
 GOTO: home

@@ -1,7 +1,7 @@
 
 CHAR: Mom_01
 
-WAIT: 500
+WAIT: 1500
 
 CHAR: Mom_02
 Mom: “Is that so?“

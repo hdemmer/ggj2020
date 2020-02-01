@@ -27,4 +27,4 @@ Grandpa: “You're a good kid, Sammy. A good kid.“
 SCENE: black
 CHAR:
 
-#TODO: all good ending
+GOTO: all_good

@@ -26,4 +26,4 @@ Grandpa: “Make something with it.“
 SCENE: black
 CHAR:
 
-#TODO: all good ending
+GOTO: all_good

@@ -31,4 +31,4 @@ Grandpa: “And ... visit me now and then, okay?“
 SCENE: black
 CHAR:
 
-#TODO: all good ending
+GOTO: all_good

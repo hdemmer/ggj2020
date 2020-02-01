@@ -6,7 +6,7 @@ Mom: “Well, if you can find it in the chaos of his things, you can keep it.“
 
 CHAR: Sammy_01
 
-WAIT: 800
+WAIT: 2000
 
 CHAR: Mom_leave
 

@@ -12,8 +12,8 @@ MUSIC: song18
 
 WAIT:
 
-SAMMY: "What did you do, dad?"
-DAD: "I screwed up, Sammy. I screwed up."
+Sammy: "What did you do, dad?"
+Dad: "I screwed up, Sammy. I screwed up."
 "All the time I should have ..."
 
 SCENE: black
@@ -22,7 +22,7 @@ SCENE: Intro_01_B
 
 WAIT: 2000
 
-SAMMY: Dad ... Dad?
+Sammy: Dad ... Dad?
 
 SCENE: black
 
@@ -32,7 +32,7 @@ I found it days later with a note in his handwriting.
 
 SHOWDOT:
 
-DAD: "This is DOT. Well ... part of it."
+Dad: "This is DOT. Well ... part of it."
 "I gave a piece each to my father, my ex-wife, and my two children."
 
 SCENE: black
