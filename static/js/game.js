@@ -1,7 +1,9 @@
 
-function Game(gameDiv, gameData)
+function Game(gameDiv, gameData, state)
 {
     var self = this;
+
+    self.state = state;
 
     self.queue = [];
     var layersDiv = gameDiv.querySelector("#layers");
@@ -28,8 +30,22 @@ function Game(gameDiv, gameData)
     const SCENE = 'scene';
     const CHAR = 'char';
 
-    function chooseOption(option)
+    function chooseOption(optionIndex)
     {
+        if (self.state.options)
+        {
+            if (optionIndex < 0 || optionIndex >= self.state.options.length)
+            {
+                console.error('option out of range: ' + optionIndex);
+                return;
+            }
+            var chosenOption = self.state.options[optionIndex];
+            self.state.options = null;
+            self.queueScript(chosenOption.script);
+            chooseOption(-1);
+            return;
+        }
+
         if (self.queue.length == 0)
         {
             // TODO: game over
@@ -120,14 +136,21 @@ function Game(gameDiv, gameData)
         chooseOption(-1);
     }
 
+    self.chooseOption = chooseOption;
+
     return self;
 }
 
 async function launch()
 {
+    var state = {
+        kv:{},
+        uuid:null,
+        options:null
+    };
     window.gameData = await getJson('/data');
     var gameDiv = document.getElementById('game');
-    window.game = new Game(gameDiv, window.gameData);
+    window.game = new Game(gameDiv, window.gameData, state);
     await window.game.bootstrap();
     document.getElementById('loading').classList.add('hidden');
 }
