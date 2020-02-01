@@ -13,5 +13,4 @@ DAD: “Yes. Listen to your heart. See the sorrow of your family with your own e
 SCENE: Intro_01_B
 SAMMY: Dad ... Dad?
 
-SCENE: Intro_02
-SAMMY: DOT ...
+GOTO: 01_home

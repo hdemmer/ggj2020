@@ -12,15 +12,47 @@ function Game(gameDiv, gameData)
 
     var inTimeout = false;
 
+    function parseCommand(line)
+    {
+        var spl = line.split(':');
+        return spl[0].toUpperCase();
+    }
+
+    function parseParam(line)
+    {
+        var cmd = parseCommand(line);
+        var param = line.substring(cmd.length + 1);
+        param = param.replace(/^ +/,'');
+        return param;
+    }
+    const SCENE = 'scene';
+    const CHAR = 'char';
+
     function chooseOption(option)
     {
-        var line = self.queue.shift();
-        console.log(line);
-        if (line.toUpperCase().startsWith('SCENE:'))
+        if (self.queue.length == 0)
         {
-            var layerName = line.substring('SCENE:'.length);
-            layerName = layerName.replace(/ /g,'');
-            showLayer(layerName);
+            // TODO: game over
+            return;
+        }
+        var line = self.queue.shift();
+        var cmd = parseCommand(line);
+        var param = parseParam(line);
+        console.log(line + "\n" + cmd + '\n' + param);
+        
+        if (cmd == 'SCENE')
+        {
+            var layerName = param;
+            showLayer(SCENE,layerName);
+            chooseOption(-1);
+        } else if (cmd == 'CHAR')
+        {
+            var layerName = param;
+            showLayer(CHAR,layerName);
+            chooseOption(-1);
+        } else if (cmd=='GOTO'){
+            self.queue = [];
+            self.queueScript(param);
             chooseOption(-1);
         } else {
             optionsDiv.innerHTML = line;
@@ -29,23 +61,32 @@ function Game(gameDiv, gameData)
 
     function forwardClick()
     {
-        if (inTimeout) { return; }
+        // TODO!: if (inTimeout) { return; }
         inTimeout = true;
         setTimeout(()=>{inTimeout = false},300);
         chooseOption(-1);
     }
 
-    function showLayer(name)
+    function showLayer(group,name)
     {
         layers.forEach((l)=>{
             // console.log('hide: ' + l.id)
             var cl = l.classList;
-            cl.remove('visible');
-            cl.add('hidden');
+            if (cl.contains(group))
+            {
+                cl.remove('visible');
+                cl.add('hidden');
+            }
         });
-        var icl = layersDiv.querySelector('#'+name).classList;
+        var img = layersDiv.querySelector('#'+name);
+        if (!img) {
+            console.error('IMAGE NOT FOUND: ' + name);
+            return;
+        }
+        var icl = img.classList;
         icl.add('visible');
         icl.remove('hidden');
+        icl.add(group);
     }
 
     function addLayer(name,src){
@@ -62,6 +103,12 @@ function Game(gameDiv, gameData)
         });
       }
 
+    self.queueScript = function(scriptName)
+    {
+        var script = gameData.passages[scriptName];
+        self.queue = script;
+    }
+
     self.bootstrap = async function()
     {
         for (const name in gameData.art) {
@@ -69,8 +116,7 @@ function Game(gameDiv, gameData)
             await addLayer(name,src);
         }
 
-        var startScript = gameData.passages[gameData.start];
-        self.queue = startScript;
+        self.queueScript(gameData.start);
         chooseOption(-1);
     }
 

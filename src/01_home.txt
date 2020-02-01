@@ -1,0 +1,19 @@
+
+SCENE: Home
+CHAR: Sammy_01
+SAMMY: “So DOT… What should I do with you now? Dad said you would help me. But how? You are just a dysfunctional robot.”
+CHAR: DOT
+“...”
+SCENE: Intro_02
+CHAR:
+Sammy: “I guess I have to fix you, like Dad told me to, before you can tell me, huh?”
+CHAR: DOT
+“...”
+SCENE: Intro_02
+CHAR:
+SAMMY: “But where should I start?”
+
+OPTIONS:
+→ Go to Grandpa
+→ Go to Mom
+→ Go to [Player Name/ Sibling]
