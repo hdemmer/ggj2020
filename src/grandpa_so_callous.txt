@@ -1,0 +1,30 @@
+SCENE: Grandpa_Backround
+
+CHAR: Sammy_01
+Sammy: “You have always been this way. Even Dad wondered till the end if you love him, even just a little bit.” 
+
+CHAR: Grandpa_01
+Grandpa:”Of course i loved him. He was so very precious to me. You have no Idea what you´re talking about!”
+
+CHAR: Sammy_01
+Sammy: “And how come you never showed him?”
+
+CHAR: Grandpa_01
+Grandpa: “I tried to. But after the war I trapped all the hurt inside. I tried not to get attached to someone again so I don't have to feel this pain of losing someone close to me. But now that your dad is gone, it hurts so much. I will never see my boy again. And I can't make up for all the times I missed to tell him, how much I loved him. This robot heart is the only thing I have. So I can't give it to you. I am sorry.” 
+
+CHAR: Sammy_01
+Sammy: “But… it isn't the only thing. You still have me. I can tell you all the stories he told me about you. Tell you, how much he loved you. You don't have to be afraid to show others, how you feel.”
+
+CHAR: Grandpa_01
+Grandpa: “Maybe you´re right. Maybe you are my last chance to make things right.”
+
+SCENE: Grandpa_Hug
+CHAR:
+
+WAIT:
+
+SCENE: Grandpa_Backround
+
+CHAR: Grandpa_02
+
+WAIT:

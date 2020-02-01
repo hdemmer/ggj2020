@@ -4,6 +4,13 @@ function Game(gameDiv, gameData, state)
     var self = this;
 
     self.state = state;
+    self.options = null;
+    self.waitTimeout = null;
+    function killWaitTimeout()
+    {
+        clearTimeout(self.waitTimeout);
+        self.waitTimeout = null;
+    }
 
     self.queue = [];
     var layersDiv = gameDiv.querySelector("#layers");
@@ -35,20 +42,30 @@ function Game(gameDiv, gameData, state)
 
     function chooseOption(optionIndex)
     {
-        if (self.state.options)
+        if (inTimeout) { return; }
+        inTimeout = true;
+        setTimeout(()=>{inTimeout = false},50);
+        killWaitTimeout();
+        
+        optionsDiv.classList.remove('hiddenOption');
+        if (self.options)
         {
-            if (optionIndex < 0 || optionIndex >= self.state.options.length)
+            if (optionIndex < 0 || optionIndex >= self.options.length)
             {
                 console.error('option out of range: ' + optionIndex);
                 return;
             }
-            var chosenOption = self.state.options[optionIndex];
-            self.state.options = null;
+            var chosenOption = self.options[optionIndex];
+            self.options = null;
             self.queueScript(chosenOption.script);
-            chooseOption(-1);
-            return;
+            advance();
+        } else {
+            advance();
         }
-
+    }
+    
+    function advance()
+    {
         if (self.queue.length == 0)
         {
             // TODO: game over
@@ -63,18 +80,43 @@ function Game(gameDiv, gameData, state)
         {
             var layerName = param;
             showLayer(SCENE,layerName);
-            chooseOption(-1);
+            advance();
         } else if (cmd == 'CHAR')
         {
             var layerName = param;
             showLayer(CHAR,layerName);
-            chooseOption(-1);
+            advance();
         } else if (cmd == 'MUSIC') {
             playMusic(param);
+            advance();
         }else if (cmd == 'GOTO'){
             self.queue = [];
             self.queueScript(param);
-            chooseOption(-1);
+            advance();
+        } else if (cmd == 'WAIT') {
+            optionsDiv.classList.add('hiddenOption');
+            if (param)
+            {
+                var timeout = parseInt(param,10);
+                console.log(timeout);
+                if (timeout)
+                {
+                    self.waitTimeout = setTimeout(forwardClick,timeout);
+                }
+            }
+        } else if (cmd == 'OPTIONS') {
+            var options = self.queue.map((line)=>{
+                var spl = line.split('|');
+                return {text:spl[0],script:spl[1]};
+            });
+            self.options = options;
+            var html = '';
+            for (var i = 0; i < options.length; i++)
+            {
+                var option = options[i];
+                html += '<div onclick="window.game.chooseOption('+i+')">'+option.text+'</div>'
+            }
+            optionsDiv.innerHTML = html;
         } else {
             optionsDiv.innerHTML = line;
         }
@@ -82,9 +124,10 @@ function Game(gameDiv, gameData, state)
 
     function forwardClick()
     {
-        // TODO!: if (inTimeout) { return; }
-        inTimeout = true;
-        setTimeout(()=>{inTimeout = false},300);
+        if (self.options)
+        {
+            return;
+        }
         chooseOption(-1);
     }
 
@@ -99,15 +142,18 @@ function Game(gameDiv, gameData, state)
                 cl.add('hidden');
             }
         });
-        var img = layersDiv.querySelector('#'+name);
-        if (!img) {
-            console.error('IMAGE NOT FOUND: ' + name);
-            return;
+        if (name)
+        {
+            var img = layersDiv.querySelector('#'+name);
+            if (!img) {
+                console.error('IMAGE NOT FOUND: ' + name);
+                return;
+            }
+            var icl = img.classList;
+            icl.add('visible');
+            icl.remove('hidden');
+            icl.add(group);
         }
-        var icl = img.classList;
-        icl.add('visible');
-        icl.remove('hidden');
-        icl.add(group);
     }
 
     function addLayer(name,src){
@@ -195,10 +241,11 @@ function Game(gameDiv, gameData, state)
         }
 
         self.queueScript(gameData.start);
-        chooseOption(-1);
+        advance();
     }
 
     self.chooseOption = chooseOption;
+    self.advance = advance;
 
     return self;
 }

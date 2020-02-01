@@ -65,15 +65,29 @@ body
     backdrop-filter: blur(16px);
 }
 
+.options button
+{
+    color: #fff;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 48px;
+    display: block;
+    width: 100%;
+}
+
 .visible {
     visibility: visible;
     opacity: 1;
     transition: opacity 1s linear;
   }
 .hidden {
-visibility: hidden;
-opacity: 0;
-transition: visibility 0s 1s, opacity 1s linear;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.hiddenOption {
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
 }
 
 button {

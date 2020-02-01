@@ -1,0 +1,21 @@
+SCENE: black
+
+WAIT: 1500
+
+SCENE: Grandpa_Backround
+
+CHAR: Sammy_01
+SAMMY: “Hey Grandpa. I need to speak to you.”
+
+CHAR: Grandpa_01
+GRANDPA: “Haven't seen you since you were little. Hmmm, now that you´ve grown up, we finally can talk like adults. What brings you to me?”
+
+CHAR: Sammy_01
+SAMMY: “What do you mean “talk like adults”? Was I not to your liking as a child?”
+
+CHAR: Grandpa_01
+GRANDPA: “That's not it. Stop asking silly questions.”
+
+OPTIONS:
+→ “I see that this is really hard on you.”
+→ “Is it really that silly to ask why you never wanted to see me?”

@@ -1,0 +1,13 @@
+SCENE: Grandpa_Backround
+
+CHAR: Sammy_01
+SAMMY: “You know, I miss my dad very much. And deep down I know you miss him to.”
+
+CHAR: Grandpa_01
+Grandpa: “...”
+
+CHAR: Sammy_01
+Sammy: “I'm right, am I?”
+
+CHAR: Grandpa_01
+Grandpa: “Leave me alone. I don't want to talk about your father…”
