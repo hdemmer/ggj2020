@@ -51,5 +51,12 @@ function createWS(onMessage)
 
 window.ws = createWS();
 window.ws.onmessage = (msg)=>{
-    console.log(msg);
+    if (msg)
+    {
+        var id = msg.id;
+        if (id)
+        {
+            window.spawnEmoji(id);
+        }
+    }
 };

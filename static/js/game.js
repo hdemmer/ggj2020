@@ -214,6 +214,7 @@ async function launch()
     var gameDiv = document.getElementById('game');
     window.game = new Game(gameDiv, window.gameData, state);
     await window.game.bootstrap();
+    await window.emojifly.bootstrap();
     document.getElementById('loading').classList.add('hidden');
 }
 
