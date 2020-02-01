@@ -1,0 +1,17 @@
+SCENE: Sibling_backround
+
+CHAR: Sammy_01
+Sammy: “Hey Jules, do you have a minute?”
+
+CHAR: Sibling_01
+Jules: “Well, if you don't make any trouble. This is a university campus, so behave yourself.”
+
+CHAR: Sammy_01
+Sammy: “What do you mean?”
+
+CHAR: Sibling_02
+Jules: “Let's just say, you can be overly emotional sometimes.”
+
+OPTIONS:
+→ “What's wrong with showing my emotions?”|jules_show_emotions
+→ “Okay, I promise to suppress all my emotions while I'm around you.”|jules_suppress

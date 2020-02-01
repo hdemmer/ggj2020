@@ -1,0 +1,12 @@
+SCENE: Sibling_backround
+
+CHAR: Sammy_01
+Sammy: “Are you satisfied now? What kind of sibling are you, being ashamed of me?” 
+“Dad said we should always be there for each other. We´re family. I wanted to believe him, but it was wrong to get my hopes up.”
+
+CHAR: Sibling_01
+Jules: “Why would I want to be related to such a crybaby?” 
+“All you can do is complain about your shitty childhood. I lived there too, you know!”
+“Did I ever complain?”
+
+GOTO: jules_choice

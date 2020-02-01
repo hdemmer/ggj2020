@@ -1,0 +1,5 @@
+
+OPTIONS:
+→ “But you're the older one.”|jules_good_ending
+→ “Of course you didn't. You were Moms favorite child.”|jules_favorite_child
+→ “You know what! Never mind.”|home

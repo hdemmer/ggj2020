@@ -1,0 +1,21 @@
+SCENE: Sibling_backround
+
+CHAR: Sibling_02
+Jules: “Your drama can be quite stressful to other people, you know.“
+“I don't want my fellow students make fun of me because of you.”
+
+CHAR: Sammy_01
+Sammy: “To other people? But most of all to you, I guess?”
+
+CHAR: Sibling_01
+Jules: “If you want me to be frank… Yes. I'm fed up with your staginess.”
+
+CHAR: Sammy_01
+Sammy: “As if you never showed emotions.” 
+“I see you having lots of fun with your friends whenever I pass the campus.”
+
+CHAR: Sibling_02
+Jules: “That's different. You always mope around.” 
+“You were such a crybaby when you were a kid. Nobody wants to have to deal with pathetic little brats.”
+
+GOTO: jules_choice
