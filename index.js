@@ -70,6 +70,11 @@ app.get('/data', async function(req,res){
   res.send(gameData);
 });
 
+app.get('/emoji', async function(req,res){ 
+  var emojiData = await compileEmoji();
+  res.send(emojiData);
+});
+
 var sockets = [];
 app.ws('/ws', function(ws, req) {
   sockets.push(ws);
@@ -87,8 +92,19 @@ function broadcast(msg)
   })
 }
 
-app.post('/state', jsonBodyParser,function(req,res){
-  console.log(req.body);
+async function compileEmoji()
+{
+  var srcFiles = await readdir('static/emoji');
+  var emoji = {};
+  for (const i in srcFiles) {
+    var fileName = srcFiles[i];
+    var key = fileName.replace(/\.png$/,'');
+    emoji[key] = '/emoji/'+fileName;
+  }
+  return emoji;
+}
+
+app.post('/emoji', jsonBodyParser,function(req,res){
   broadcast(req.body);
 });
 
