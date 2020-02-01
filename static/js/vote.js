@@ -30,7 +30,7 @@ function createVoter(onMessage)
         }
     };
 
-    self.onmessage = onMessage;
+    self.onmessage = ()=>{};
     self.send = function(msg){
         if (!self.isConnected)
         {
@@ -49,6 +49,7 @@ function createVoter(onMessage)
     return self;
 }
 
-window.voter = createVoter((msg)=>{
+window.voter = createVoter();
+window.voter.onmessage = (msg)=>{
     console.log(msg);
-});
+};

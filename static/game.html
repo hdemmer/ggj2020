@@ -3,14 +3,20 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Griffy&display=swap&subset=latin-ext" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet"> 
+        <script src="/js/game.js"></script>
+        <script src="/js/vote.js"></script>
         <link rel="stylesheet" href="/css/game.css">
     </head>
     <body onload="start()">
+        <div class="game" id="game">
+            <div class="layers" id="layers">
+
+            </div>
+            <div class="options" id="options">
+            </div>
+        </div>
         <div class="loading" id="loading">
-            <span class="title">
-                <a href="/game.html">Play</a>
-                <a href="/vote.html">Vote</a>
-            </span>
+            <span class="title">Loading...</span>
         </div>
     </body>
 </html>
