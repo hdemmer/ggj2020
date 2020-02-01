@@ -17,5 +17,5 @@ CHAR: Grandpa_01
 GRANDPA: “That's not it. Stop asking silly questions.”
 
 OPTIONS:
-→ “I see that this is really hard on you.”
-→ “Is it really that silly to ask why you never wanted to see me?”
+→ “I see that this is really hard on you.”|grandpa_hard_on_you
+→ “Is it really that silly to ask why you never wanted to see me?”|grandpa_never_wanted_to_see

@@ -20,3 +20,5 @@ Sammy: “But it belongs to the robot dad was building. I want to fix it. Please
 
 CHAR: Grandpa_01
 Grandpa: ”No.”
+
+GOTO: grandpa_choice

@@ -11,3 +11,5 @@ Sammy: “I'm right, am I?”
 
 CHAR: Grandpa_01
 Grandpa: “Leave me alone. I don't want to talk about your father…”
+
+GOTO: grandpa_choice
