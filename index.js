@@ -1,4 +1,6 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const jsonBodyParser = bodyParser.json({ limit: '10mb' });
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 const fs = require('fs');
@@ -7,6 +9,7 @@ const readdir = util.promisify(fs.readdir);
 const readfile = util.promisify(fs.readFile);
 
 var app = express();
+var expressWs = require('express-ws')(app);
 
 app.use(express.static(path.join(__dirname, 'static')));
 
@@ -55,6 +58,31 @@ async function compileGameData()
 app.get('/data', async function(req,res){ 
   var gameData = await compileGameData();
   res.send(gameData);
-})
+});
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+var sockets = [];
+app.ws('/ws', function(ws, req) {
+  sockets.push(ws);
+});
+
+const WebSocket = require('ws');
+function broadcast(msg)
+{
+  var json = JSON.stringify(msg);
+  console.log('broadcasting: ' + json);
+  sockets.forEach((client)=>{
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(json);
+    }
+  })
+}
+
+app.post('/state', jsonBodyParser,function(req,res){
+  console.log(req.body);
+  broadcast(req.body);
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on ${ PORT }`);
+});
+

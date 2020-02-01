@@ -72,6 +72,7 @@ function Game(gameDiv, gameData, state)
             chooseOption(-1);
         } else {
             optionsDiv.innerHTML = line;
+            window.postData('/state', {line});
         }
     }
 
