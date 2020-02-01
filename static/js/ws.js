@@ -1,5 +1,5 @@
 
-function createWS(onMessage)
+window.createWS = function()
 {
     var wsScheme = "wss://";
     if (window.location.protocol == "http:") { wsScheme = "ws://"; }
@@ -8,12 +8,11 @@ function createWS(onMessage)
     var self = {};
     self.isDestroyed = false;
     self.isConnected = false;
-    self.lastError = null;
     
     var ws = new WebSocket(url);
     ws.onerror = (ev)=>{
         console.error('ws error ' + JSON.stringify(ev));
-        self.lastError = ev;
+        window.ws = createWS();
     };
     ws.onopen = (ev)=>{
         self.isConnected = true;
@@ -26,11 +25,23 @@ function createWS(onMessage)
         self.isConnected = false;
         if (!self.isDestroyed)
         {
-            // TODO: reconnect
+            // reconnect
+            console.log('reconnecting ws')
+            window.ws = window.createWS();
         }
     };
 
-    self.onmessage = ()=>{};
+    self.onmessage = (msg)=>{
+        if (msg)
+        {
+            var id = msg.id;
+            if (id)
+            {
+                window.spawnEmoji(id);
+            }
+        }
+    };
+    
     self.send = function(msg){
         if (!self.isConnected)
         {
@@ -49,14 +60,4 @@ function createWS(onMessage)
     return self;
 }
 
-window.ws = createWS();
-window.ws.onmessage = (msg)=>{
-    if (msg)
-    {
-        var id = msg.id;
-        if (id)
-        {
-            window.spawnEmoji(id);
-        }
-    }
-};
+window.ws = window.createWS();

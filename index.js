@@ -9,7 +9,7 @@ const readdir = util.promisify(fs.readdir);
 const readfile = util.promisify(fs.readFile);
 
 var app = express();
-var expressWs = require('express-ws')(app);
+require('express-ws')(app);
 
 app.use(express.static(path.join(__dirname, 'static')));
 
@@ -106,6 +106,7 @@ async function compileEmoji()
 
 app.post('/emoji', jsonBodyParser,function(req,res){
   broadcast(req.body);
+  res.send(200);
 });
 
 app.listen(PORT, () => {
