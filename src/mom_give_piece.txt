@@ -1,0 +1,8 @@
+CHAR: Mom_01
+Mom: “I wouldn't even know how to find it in that mess he left.“
+Mom: “So stop being a nuisance, will you?“
+
+SCENE: black
+CHAR:
+
+GOTO: home

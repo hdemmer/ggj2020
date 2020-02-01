@@ -1,0 +1,29 @@
+CHAR: Grandpa_01
+Grandpa: “You're right. I didn't.”
+Grandpa: “It was a terrible wedding.“
+Grandpa: “And they still kept it together for so long.“
+
+CHAR: Sammy_01
+Sammy: “We did, Grandpa. You as well. Jules. Mom.“
+Sammy: “He didn't shut you out.“
+
+CHAR: Grandpa_01
+Grandpa: “I did. I did.”
+
+WAIT: 1000
+
+SCENE: Grandpa_Hug
+CHAR:
+
+WAIT:
+
+SCENE: Grandpa_Backround
+CHAR: Grandpa_02
+
+Grandpa: “Here ...“
+Grandpa: “Make something with it.“
+
+SCENE: black
+CHAR:
+
+#TODO: all good ending

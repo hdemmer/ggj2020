@@ -11,6 +11,9 @@ WAIT: 800
 
 SCENE: Sibling_Cry
 
+SET: JULES
+SET: JULES_GOOD
+
 WAIT:
 
 GOTO: home

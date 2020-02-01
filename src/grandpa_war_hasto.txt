@@ -1,0 +1,15 @@
+CHAR: Grandpa_01
+Grandpa: “Yes. I guess someone has to.”
+Grandpa: “Take that robot piece. It's tainted to me anyway.”
+
+CHAR: Sammy_01
+
+WAIT: 1000
+
+CHAR: Grandpa_leave
+
+WAIT: 1000
+
+SCENE: black
+
+# TODO: all bad ending

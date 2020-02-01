@@ -1,23 +1,16 @@
 SCENE: black
-
-WAIT: 1500
+CHAR:
+WAIT: 1000
 
 SCENE: Grandpa_Backround
+
+DOT_JULES: grandpa_jules
+DOT_MOM: grandpa_mom
 
 CHAR: Sammy_01
 SAMMY: “I ...”
 
 CHAR: Grandpa_01
-GRANDPA: “Go away.”
+GRANDPA: “Go away, I'm cranky today anyway.”
 
 GOTO: home
-
-CHAR: Sammy_01
-SAMMY: “What do you mean “talk like adults”? Was I not to your liking as a child?”
-
-CHAR: Grandpa_01
-GRANDPA: “That's not it. Stop asking silly questions.”
-
-OPTIONS:
-→ “I see that this is really hard on you.”|grandpa_hard_on_you
-→ “Is it really that silly to ask why you never wanted to see me?”|grandpa_never_wanted_to_see

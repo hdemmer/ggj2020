@@ -1,0 +1,23 @@
+
+CHAR: Mom_01
+
+WAIT: 500
+
+CHAR: Mom_02
+Mom: “Is that so?“
+
+DOT_JULES_GOOD: mom_jules_piece_cry
+
+DOT_JULES_STEAL: mom_jules_piece_steal
+
+CHAR: Sammy_01
+“Yeah ...“
+
+CHAR: Mom_01
+Mom: “I could always tell when your father lied.“
+Mom: “A shame you came after him.“
+
+SCENE: black
+CHAR:
+
+GOTO: home

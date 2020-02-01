@@ -1,10 +1,9 @@
 SCENE: Mom_backround
 
 CHAR: Mom_01
-Mom: “Making murder weapons was quite dear to him, yes.”
-Mom: “But don't be silly, that's all top-secret."
-Mom: “No, I have to deal with mortgages, life insurance, pensions.“
-Mom: “Now. I have to focus. Go play something.“
+Mom: “Making murder weapons was quite dear to him.”
+Mom: “But don't be silly. It's mortgages, life insurance, pensions.“
+Mom: “Now. Go play something.“
 
 SCENE: black
 CHAR:

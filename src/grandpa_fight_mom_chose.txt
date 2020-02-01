@@ -1,0 +1,26 @@
+CHAR: Grandpa_01
+Grandpa: “Well she chose wrong!”
+
+SCENE: black
+WAIT: 300
+SCENE: Grandpa_Backround
+
+Grandpa: “Uh. That's my meds kicking in.”
+Grandpa: “That'd be the last thing he does: Give me a heart-attack.”
+Grandpa: “You better go.”
+
+CHAR:
+
+WAIT: 500
+
+CHAR: Sammy_01
+
+WAIT: 500
+
+CHAR: Grandpa_leave
+
+WAIT: 1000
+
+SCENE: black
+
+# TODO: all bad ending

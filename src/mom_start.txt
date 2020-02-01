@@ -1,3 +1,6 @@
+SCENE: black
+CHAR:
+WAIT: 1000
 
 SCENE: Mom_backround
 
@@ -5,10 +8,10 @@ CHAR: Sammy_01
 Sammy: “Hey Mom...”
 
 CHAR: Mom_01
-Mom: “I'm a bit busy. Your father left a lot of paperwork for me.”
+Mom: “I'm a bit busy. Your father left a ton of paperwork.”
 
 CHAR: Sammy_01
 
 OPTIONS:
 → “Does it mention a robot?“|mom_robot_paperwork
-→ “He made me promise to talk to you.”|
+→ “He made me promise to talk to you.”|mom_dad_promise

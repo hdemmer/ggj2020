@@ -1,0 +1,18 @@
+
+CHAR: Grandpa_01
+Grandpa: “She gave him her prime. He gave her nothing.”
+
+CHAR: Sammy_01
+Sammy: “What about Jules?”
+
+CHAR: Grandpa_01
+
+WAIT: 800
+
+CHAR: Sammy_01
+Sammy: “What about me?”
+
+SCENE: black
+CHAR:
+
+GOTO: home

@@ -1,0 +1,30 @@
+CHAR: Grandpa_01
+Grandpa: “I did. And I'm not proud of it.“
+Grandpa: “I did kill.“
+
+CHAR: Sammy_01
+Sammy: “Grandpa ...“
+
+CHAR: Grandpa_01
+Grandpa: “I never told him how it was.“
+Grandpa: “Maybe it wouldn't have changed anything.“
+
+CHAR: Sammy_01
+Sammy: It does for me ...“
+
+WAIT: 1000
+
+SCENE: Grandpa_Hug
+CHAR:
+
+WAIT:
+
+SCENE: Grandpa_Backround
+CHAR: Grandpa_02
+
+Grandpa: “You're a good kid, Sammy. A good kid.“
+
+SCENE: black
+CHAR:
+
+#TODO: all good ending

@@ -7,4 +7,4 @@ CHAR: Sammy_01
 OPTIONS:
 → "Jules had a piece as well and gave it to me."|mom_jules_piece
 → "Grandpa had a piece as well and gave it to me."|mom_grandpa_piece
-→ "Would you give it to me?"|
+→ "Would you give it to me?"|mom_give_piece

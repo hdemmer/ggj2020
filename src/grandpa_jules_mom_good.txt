@@ -1,0 +1,34 @@
+
+CHAR: Grandpa_01
+
+WAIT: 1000
+
+CHAR: Sammy_01
+Sammy: “Did you?“
+
+CHAR: Grandpa_01
+
+WAIT:500
+
+Grandpa nods silently.
+
+Grandpa: “Despite everything.“
+Grandpa: “Damn, there's a lot of him in you.“
+
+WAIT: 1000
+
+SCENE: Grandpa_Hug
+CHAR:
+
+WAIT:
+
+SCENE: Grandpa_Backround
+CHAR: Grandpa_02
+
+Grandpa: “Here ...“
+Grandpa: “And ... visit me now and then, okay?“
+
+SCENE: black
+CHAR:
+
+#TODO: all good ending

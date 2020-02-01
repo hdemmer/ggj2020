@@ -1,0 +1,18 @@
+CHAR: Sammy_01
+Sammy: “Mom gave me her piece of dad's robot.”
+
+CHAR: Grandpa_01
+Grandpa: “She's moving on.”
+
+DOT_MOM_GOOD: grandpa_mom_good
+
+# mom_steal and no jules
+
+CHAR: Grandpa_01
+Grandpa: “How's Jules doing? Studying to become an engineer?”
+Grandpa: “Some things just run in the family, I guess.”
+
+SCENE: black
+CHAR:
+
+GOTO: home

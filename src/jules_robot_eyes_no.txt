@@ -17,6 +17,9 @@ Jules: "I didn't want to. I never wanted to cry."
 SCENE: Sibling_Cry
 CHAR:
 
+SET: JULES
+SET: JULES_GOOD
+
 WAIT:
 
 SCENE: black

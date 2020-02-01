@@ -13,6 +13,9 @@ WAIT: 500
 
 CHAR: Sibling_leave
 
+SET: JULES
+SET: JULES_GOOD
+
 WAIT:
 
 SCENE: black

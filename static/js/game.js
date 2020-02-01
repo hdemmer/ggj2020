@@ -30,6 +30,11 @@ function Game(gameDiv, gameData, state)
         return spl[0].toUpperCase();
     }
 
+    function setFlag(flag,value)
+    {
+        self.state[flag] = value;
+    }
+
     function parseParam(line)
     {
         var cmd = parseCommand(line);
@@ -39,6 +44,15 @@ function Game(gameDiv, gameData, state)
     }
     const SCENE = 'scene';
     const CHAR = 'char';
+
+    function evalDotCommand(cmd, param)
+    {
+        cmd = cmd.replace('DOT_','');
+        if (self.state[cmd])
+        {
+            queueScript(param);
+        }
+    }
 
     function chooseOption(optionIndex)
     {
@@ -117,6 +131,11 @@ function Game(gameDiv, gameData, state)
                 html += '<div onclick="window.game.chooseOption('+i+')">'+option.text+'</div>'
             }
             optionsDiv.innerHTML = html;
+        } else if (cmd == 'SET') {
+            setFlag(param,true);
+        }else if (cmd.startsWith('DOT')) {
+            evalDotCommand(cmd,param);
+            advance();
         } else {
             optionsDiv.innerHTML = line;
         }
@@ -244,6 +263,7 @@ function Game(gameDiv, gameData, state)
 
     self.chooseOption = chooseOption;
     self.advance = advance;
+    self.setFlag = setFlag;
 
     return self;
 }
@@ -251,9 +271,6 @@ function Game(gameDiv, gameData, state)
 async function launch()
 {
     var state = {
-        kv:{},
-        uuid:null,
-        options:null
     };
     window.gameData = await getJson('/data');
     var gameDiv = document.getElementById('game');

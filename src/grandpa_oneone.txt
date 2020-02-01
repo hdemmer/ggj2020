@@ -1,0 +1,10 @@
+CHAR: Sammy_01
+Sammy: “Why did you fight?“
+
+CHAR: Grandpa_01
+GRANDPA: “Over everything.”
+
+CHAR: Sammy_01
+OPTIONS:
+→ "About mom?"|grandpa_fight_mom
+→ "About the war?"|grandpa_war

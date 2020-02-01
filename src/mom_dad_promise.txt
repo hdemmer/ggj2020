@@ -1,0 +1,9 @@
+CHAR: Mom_02
+Mom: “Well, Sammy. I promised myself not to ever talk to him again.“
+Mom: “I guess that makes us even.“
+Mom: “Now, clean up your room or something.“
+
+SCENE: black
+CHAR:
+
+GOTO: home

@@ -1,0 +1,8 @@
+CHAR: Grandpa_01
+Grandpa: “He kept her small, you know?”
+
+CHAR: Sammy_01
+
+OPTIONS:
+“She chose him.“|grandpa_fight_mom_chose
+“You didn't say no.“|grandpa_fight_mom_no

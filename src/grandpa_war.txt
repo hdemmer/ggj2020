@@ -1,0 +1,8 @@
+CHAR: Grandpa_01
+Grandpa: “He was a smart guy, I'll grant him that.”
+Grandpa: “Perfect wife. Kids.”
+Grandpa: “And eight hours in the day he would spend dreaming up things to kill people faster.”
+
+CHAR: Sammy_01
+→ "Someone has to."|grandpa_war_hasto
+→ "Did you kill? In the war?"|grandpa_war_kill

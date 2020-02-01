@@ -1,0 +1,10 @@
+CHAR: Grandpa_01
+Grandpa: “Typical. If your father had had any guts he would have made you fight for it.”
+
+DOT_JULES_GOOD: grandpa_jules_good
+DOT_MOM_GOOD: grandpa_oneone
+DOT_MOM_STEAL: grandpa_allbad
+
+ERROR ERROR ERROR
+
+GOTO: home

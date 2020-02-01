@@ -1,0 +1,18 @@
+CHAR: Sammy_01
+Sammy: “Grandpa! I love Jules. I loved dad.“
+
+DOT_MOM_GOOD: grandpa_jules_mom_good
+DOT_MOM_STEAL: grandpa_oneone
+
+CHAR: Grandpa_01
+Grandpa: “What about your mother?“
+
+CHAR: Sammy_01
+Sammy: “He was never good enough for her.“
+
+CHAR: Grandpa_01
+Grandpa: “No. He wasn't.“
+
+SCENE: black
+CHAR:
+GOTO: home

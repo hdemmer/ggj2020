@@ -1,5 +1,0 @@
-
-OPTIONS:
-→ “Oh! That is so much like you!”|mom_good_ending
-→ “I just told you how great my life is without you in it!”|mom_steal
-→ “You know what! Never mind.”|home

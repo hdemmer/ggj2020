@@ -1,3 +1,7 @@
+SCENE: black
+CHAR:
+WAIT: 1000
+
 SCENE: Sibling_backround
 
 CHAR: Sibling_01

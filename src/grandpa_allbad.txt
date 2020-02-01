@@ -1,0 +1,17 @@
+CHAR: Sammy_01
+Sammy: “You're right...”
+
+CHAR:
+
+WAIT: 800
+
+CHAR: Grandpa_01
+GRANDPA: “Hey! Put that down!”
+
+CHAR: Grandpa_leave
+
+WAIT: 1000
+
+SCENE: black
+
+# TODO: all bad ending

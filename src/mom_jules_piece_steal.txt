@@ -1,0 +1,20 @@
+CHAR: Sammy_01
+Sammy: “Yes.“
+
+CHAR: Mom_01
+Mom: “Well, if you can find it in the chaos of his things, you can keep it.“
+
+CHAR: Sammy_01
+
+WAIT: 800
+
+CHAR: Mom_leave
+
+SET: MOM_STEAL
+
+WAIT:
+
+SCENE: black
+CHAR:
+
+GOTO: home
