@@ -2,6 +2,8 @@ SCENE: black
 CHAR:
 WAIT: 1000
 
+DOT_MOM: mom_abort
+
 SCENE: Mom_backround
 
 CHAR: Sammy_01

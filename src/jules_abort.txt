@@ -1,0 +1,6 @@
+CHAR: Sammy_01
+Sammy: "I already have Jules' piece."
+
+CHAR:
+
+GOTO: home

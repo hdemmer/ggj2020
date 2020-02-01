@@ -1,6 +1,7 @@
-
 SCENE: black
 CHAR: Sammy_01
+
+WAIT: 500
 
 OPTIONS:
 → Go talk to Grandpa|grandpa_start

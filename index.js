@@ -38,6 +38,7 @@ async function compileGameData()
   var passages = {};
   for (const i in srcFiles) {
     var fileName = srcFiles[i];
+    if (fileName.startsWith('.')) { continue; }
     var key = fileName.replace(/\.txt$/,'');
     var buffer = await readfile(SRC+'/'+fileName);
     var lines = parseLines(buffer.toString());
@@ -48,6 +49,7 @@ async function compileGameData()
   var art = {};
   for (const i in artFiles) {
     var fileName = artFiles[i];
+    if (fileName.startsWith('.')) { continue; }
     var key = fileName.replace(/\.png$/,'').replace(/\.jpg$/,'');
     var path = '/art/'+fileName;
     art[key] = path;
@@ -57,6 +59,7 @@ async function compileGameData()
   var music = {};
   for (const i in musicFiles) {
     var fileName = musicFiles[i];
+    if (fileName.startsWith('.')) { continue; }
     var key = fileName.replace(/\.mp3$/,'');
     var path = '/music/'+fileName;
     music[key] = path;

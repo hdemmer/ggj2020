@@ -1,9 +1,20 @@
+
 CHAR: Sibling_02
-Jules: "He treated you so bad. Treated mom bad. His own father."
-"We fled upstairs when they were yelling at each other."
+Jules: "Maybe the oldest child is the mean one then?"
 
 CHAR: Sammy_01
-Sammy: "You never cried."
+Sammy: "The tough one."
+
+CHAR: Sibling_02
+
+WAIT: 2000
+
+CHAR: Sammy_01
+Sammy: "You took dad's yelling. Grandpa's. Even mom's."
+Sammy: "And you never cried."
+
+CHAR: Sibling_02
+Jules: "No ..."
 
 SCENE: black
 
@@ -11,8 +22,20 @@ WAIT: 800
 
 SCENE: Sibling_Cry
 
+WAIT:
+
+SCENE: black
+
+WAIT: 500
+
+SHOWDOT:
+WAIT: 500
 SET: JULES
+SHOWDOT:
+WAIT: 500
 SET: JULES_GOOD
+SHOWDOT:
+WAIT: 1000
 
 WAIT:
 

@@ -2,6 +2,8 @@ SCENE: black
 CHAR:
 WAIT: 1000
 
+DOT_JULES: jules_abort
+
 SCENE: Sibling_backround
 
 CHAR: Sibling_01

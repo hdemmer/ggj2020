@@ -50,8 +50,28 @@ function Game(gameDiv, gameData, state)
         cmd = cmd.replace('DOT_','');
         if (self.state[cmd])
         {
-            queueScript(param);
+            self.queueScript(param);
         }
+    }
+
+    function showDot()
+    {
+        var mom = 0;
+        var jules = 0;
+        var grandpa = 0;
+        if (self.state['MOM']){mom = 1;}
+        if (self.state['MOM_GOOD']){mom = 2;}
+        if (self.state['JULES']){jules = 1;}
+        if (self.state['JULES_GOOD']){jules = 2;}
+        if (self.state['GRANDPA']){grandpa = 1;}
+        if (self.state['GRANDPA_GOOD']){grandpa = 2;}
+
+        var layerName =  'dot'
+            +jules
+            +mom
+            +grandpa;
+        showLayer(SCENE,layerName);
+        showLayer(CHAR,'');
     }
 
     function chooseOption(optionIndex)
@@ -133,8 +153,12 @@ function Game(gameDiv, gameData, state)
             optionsDiv.innerHTML = html;
         } else if (cmd == 'SET') {
             setFlag(param,true);
-        }else if (cmd.startsWith('DOT')) {
+            advance();
+        } else if (cmd.startsWith('DOT')) {
             evalDotCommand(cmd,param);
+            advance();
+        } else if (cmd == 'SHOWDOT') {
+            showDot();
             advance();
         } else {
             optionsDiv.innerHTML = line;
@@ -241,7 +265,7 @@ function Game(gameDiv, gameData, state)
 
     self.queueScript = function(scriptName)
     {
-        var script = gameData.passages[scriptName];
+        var script = JSON.parse(JSON.stringify(gameData.passages[scriptName]));
         self.queue = script;
     }
 

@@ -17,13 +17,19 @@ Jules: "I didn't want to. I never wanted to cry."
 SCENE: Sibling_Cry
 CHAR:
 
-SET: JULES
-SET: JULES_GOOD
-
 WAIT:
 
 SCENE: black
 
-Sammy: "Jules gave me you eyes, DOT."
+Sammy: "Jules gave me your eyes, DOT."
+
+SHOWDOT:
+WAIT: 500
+SET: JULES
+SHOWDOT:
+WAIT: 500
+SET: JULES_GOOD
+SHOWDOT:
+WAIT: 1000
 
 GOTO: home

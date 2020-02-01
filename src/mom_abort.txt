@@ -1,0 +1,6 @@
+CHAR: Sammy_01
+Sammy: "I already have mom's piece."
+
+CHAR:
+
+GOTO: home

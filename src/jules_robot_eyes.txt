@@ -6,5 +6,7 @@ WAIT: 500
 Jules: "Is this some secret military stuff?"
 
 CHAR: Sammy_01
+
+OPTIONS:
 → "Sssh! Yes."|jules_robot_eyes_yes
 → "No."|jules_robot_eyes_no

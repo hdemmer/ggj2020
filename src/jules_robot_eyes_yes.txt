@@ -1,5 +1,5 @@
 CHAR: Sibling_02
-Jules: "So ... Jewelry, eh?"
+Jules: "So ... Ahem ... Jewelry, eh?"
 "Not my style. You can have 'em."
 
 CHAR: Sibling_01
@@ -13,12 +13,18 @@ WAIT: 500
 
 CHAR: Sibling_leave
 
-SET: JULES
-SET: JULES_GOOD
-
 WAIT:
 
 SCENE: black
 CHAR:
+
+WAIT: 1000
+
+SHOWDOT:
+WAIT: 500
+SET: JULES
+SET: JULES_STEAL
+SHOWDOT:
+WAIT: 1000
 
 GOTO: home
