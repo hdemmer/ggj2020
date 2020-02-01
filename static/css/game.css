@@ -49,6 +49,17 @@ body
     height: 1080px;
     top:0;
     left:0;
+    z-index: 100;
+}
+
+.scene
+{
+    z-index: 100;
+}
+
+.char
+{
+    z-index: 150;
 }
 
 .options
@@ -63,6 +74,8 @@ body
     border: 0px solid transparent;
     border-radius: 45px;
     backdrop-filter: blur(16px);
+
+    z-index: 1000;
 }
 
 .options button
@@ -74,18 +87,23 @@ body
     width: 100%;
 }
 
-.visible {
-    visibility: visible;
+.layer {
     opacity: 1;
-    transition: opacity 1s linear;
+    transition: opacity 0.7s linear;
   }
+
 .hidden {
-    visibility: hidden;
+    opacity: 0;
+}
+
+.hiddenOption {
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
 }
 
-.hiddenOption {
+.hiddenLoading
+{
+    visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
 }

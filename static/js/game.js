@@ -136,9 +136,8 @@ function Game(gameDiv, gameData, state)
         layers.forEach((l)=>{
             // console.log('hide: ' + l.id)
             var cl = l.classList;
-            if (cl.contains(group))
+            if (cl.contains(group) && (l.id != name))
             {
-                cl.remove('visible');
                 cl.add('hidden');
             }
         });
@@ -150,9 +149,8 @@ function Game(gameDiv, gameData, state)
                 return;
             }
             var icl = img.classList;
-            icl.add('visible');
-            icl.remove('hidden');
             icl.add(group);
+            icl.remove('hidden');
         }
     }
 
@@ -262,7 +260,7 @@ async function launch()
     window.game = new Game(gameDiv, window.gameData, state);
     await window.game.bootstrap();
     await window.emojifly.bootstrap();
-    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('loading').classList.add('hiddenLoading');
 }
 
 function start()
