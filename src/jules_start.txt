@@ -1,17 +1,20 @@
 SCENE: Sibling_backround
 
+CHAR: Sibling_01
+Jules: “I have five minutes 'till class starts.”
+
 CHAR: Sammy_01
-Sammy: “Hey Jules, do you have a minute?”
+Sammy: “I won't be long. Do you have the thing dad left you?”
+
+CHAR: Sibling_03
+Jules: "This here?"
+
+CHAR: Sammy_01
+Sammy: "Yeah, can I have it?"
 
 CHAR: Sibling_01
-Jules: “Well, if you don't make any trouble. This is a university campus, so behave yourself.”
-
-CHAR: Sammy_01
-Sammy: “What do you mean?”
-
-CHAR: Sibling_02
-Jules: “Let's just say, you can be overly emotional sometimes.”
+Jules: "N...no? Why? What is it?"
 
 OPTIONS:
-→ “What's wrong with showing my emotions?”|jules_show_emotions
-→ “Okay, I promise to suppress all my emotions while I'm around you.”|jules_suppress
+→ "A piece of jewelry, not really your style, though."|jules_jewelry
+→ "Robot eyes. At least I think."|jules_robot_eyes

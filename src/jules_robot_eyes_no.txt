@@ -1,0 +1,26 @@
+CHAR: Sibling_01
+Jules: "Then what is it?"
+
+CHAR: Sammy_01
+"I know you hated him. Hated me too, right?"
+
+CHAR: Sibling_02
+Jules: "Uh ..."
+
+CHAR: Sammy_01
+Sammy: "I haven't cried since he died."
+
+CHAR: Sibling_01
+Jules: "I didn't want to. I never wanted to cry."
+"I ..."
+
+SCENE: Sibling_Cry
+CHAR:
+
+WAIT:
+
+SCENE: black
+
+Sammy: "Jules gave me you eyes, DOT."
+
+GOTO: home

@@ -5,10 +5,12 @@ WAIT: 1500
 SCENE: Grandpa_Backround
 
 CHAR: Sammy_01
-SAMMY: “Hey Grandpa. I need to speak to you.”
+SAMMY: “I ...”
 
 CHAR: Grandpa_01
-GRANDPA: “Haven't seen you since you were little. Hmmm, now that you´ve grown up, we finally can talk like adults. What brings you to me?”
+GRANDPA: “Go away.”
+
+GOTO: home
 
 CHAR: Sammy_01
 SAMMY: “What do you mean “talk like adults”? Was I not to your liking as a child?”

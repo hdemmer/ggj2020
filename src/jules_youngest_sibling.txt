@@ -1,0 +1,16 @@
+CHAR: Sibling_02
+Jules: "He treated you so bad. Treated mom bad. His own father."
+"We fled upstairs when they were yelling at each other."
+
+CHAR: Sammy_01
+Sammy: "You never cried."
+
+SCENE: black
+
+WAIT: 800
+
+SCENE: Sibling_Cry
+
+WAIT:
+
+GOTO: home

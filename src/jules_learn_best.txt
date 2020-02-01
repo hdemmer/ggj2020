@@ -1,0 +1,12 @@
+CHAR: Sibling_02
+Jules: "Heh. Don't think that'll buy you any favors."
+
+CHAR: Sammy_01
+Sammy: "No. I didn't think so."
+
+SCENE: black
+CHAR:
+
+WAIT: 800
+
+GOTO: home

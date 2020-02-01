@@ -1,0 +1,12 @@
+CHAR: Sibling_03
+Jules: "Yeah?"
+
+CHAR: Sammy_01
+Sammy: “I mean, I always looked up to you, style-wise.”
+
+CHAR: Sibling_01
+Jules: "Charmer."
+
+OPTIONS:
+→ "I learned from the best."|jules_learn_best
+→ "The youngest sibling usually is."|jules_youngest_sibling

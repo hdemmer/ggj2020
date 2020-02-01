@@ -1,17 +1,6 @@
 
-SCENE: Home
+SCENE: black
 CHAR: Sammy_01
-SAMMY: “So DOT… What should I do with you now? Dad said you would help me. But how? You are just a dysfunctional robot.”
-
-SCENE: DOT_01
-CHAR:
-“...”
-
-SCENE: Intro_02
-CHAR:
-SAMMY: “I guess I have to fix you, like Dad told me to, before you can tell me, huh?”
-
-SAMMY: “But where should I start?”
 
 OPTIONS:
 → Go talk to Grandpa|grandpa_start

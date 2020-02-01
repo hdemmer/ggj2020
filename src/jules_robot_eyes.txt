@@ -1,0 +1,10 @@
+CHAR: Sibling_03
+Jules: "Damn, I think you're right. Why the heck would he ..."
+
+WAIT: 500
+
+Jules: "Is this some secret military stuff?"
+
+CHAR: Sammy_01
+→ "Sssh! Yes."|jules_robot_eyes_yes
+→ "No."|jules_robot_eyes_no

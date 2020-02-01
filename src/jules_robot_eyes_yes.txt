@@ -1,0 +1,21 @@
+CHAR: Sibling_02
+Jules: "So ... Jewelry, eh?"
+"Not my style. You can have 'em."
+
+CHAR: Sibling_01
+"Well, I'm off for class."
+
+SCENE: white
+
+CHAR: Sammy_01
+
+WAIT: 500
+
+CHAR: Sibling_leave
+
+WAIT:
+
+SCENE: black
+CHAR:
+
+GOTO: home

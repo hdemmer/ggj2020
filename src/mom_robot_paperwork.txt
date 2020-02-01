@@ -1,0 +1,9 @@
+
+CHAR: Mom_02
+Mom: “No. Why?“
+
+CHAR: Sammy_01
+
+OPTIONS:
+→ "Oh, just because he worked in robotics."|mom_dad_robotics
+→ "He gave me one and you have a piece of it."|mom_dad_gave_robot
