@@ -302,6 +302,7 @@ function Game(gameDiv, gameData, state)
     self.chooseOption = chooseOption;
     self.advance = advance;
     self.setFlag = setFlag;
+    self.showLayer = showLayer;
 
     return self;
 }
