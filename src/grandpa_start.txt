@@ -11,7 +11,7 @@ CHAR: Sammy_01
 Sammy: “Grandpa, I ...”
 
 CHAR: Grandpa_01
-Grandpa: “Go away, I'm cranky today anyway.”
+Grandpa: “Go away. My meds are not working well today.”
 
 SCENE: black
 CHAR:

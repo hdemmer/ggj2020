@@ -1,7 +1,13 @@
 CHAR: Mom_02
 Mom: “Well, Sammy. I promised myself not to ever talk to him again.“
-Mom: “I guess that makes us even.“
-Mom: “Now, clean up your room or something.“
+
+CHAR: Sammy_01
+Sammy: “Well, you don't have to anymore.“
+
+Sammy: “I ...“
+
+CHAR: Mom_02
+Mom: “Good. Glad we had that talk.“
 
 SCENE: black
 CHAR:

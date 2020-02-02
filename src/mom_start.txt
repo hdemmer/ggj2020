@@ -7,10 +7,10 @@ DOT_MOM: mom_abort
 SCENE: Mom_backround
 
 CHAR: Sammy_01
-Sammy: “Hey Mom...”
+Sammy: “Hey ... Mom ...”
 
 CHAR: Mom_01
-Mom: “I'm a bit busy. Your father left a ton of paperwork.”
+Mom: “I'm busy. Your father left a ton of paperwork.”
 
 CHAR: Sammy_01
 

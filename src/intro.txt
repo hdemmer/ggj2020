@@ -28,6 +28,7 @@ WAIT:
 Sammy: "What did you do, dad?"
 Dad: "I screwed up, Sammy. I screwed up."
 Dad: "All the time I should have ..."
+Dad: "I'm sorry I couldn't be with you longer."
 
 SCENE: black
 
@@ -50,7 +51,7 @@ Dad: "I gave a piece each to my father-in-law, my ex-wife, and my two children."
 
 SCENE: black
 
-Grandpa, mom, Jules ...
+Grandpa, Mom, Jules ...
 
 Of all people.
 
