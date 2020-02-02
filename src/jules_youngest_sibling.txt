@@ -23,7 +23,8 @@ CHAR: Sibling_02
 Jules: "I ... I think my class is about to start ..."
 
 CHAR: Sammy_01
-Sammy: "Don't be cold, Jules. For once."
+Sammy: "Jules. This is important."
+Sammy: "Don't be cold. For once."
 Sammy: "Please."
 
 CHAR: Sibling_02
