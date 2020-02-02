@@ -19,9 +19,19 @@
         var overlayDiv = document.getElementById('overlay');
 
         var inCooldown = false;
+        window.emojiOn = true;
+
+        window.addEventListener('keyup',function(ev){
+            var char = event.which || event.keyCode;
+            if (char == 69)
+            {
+                window.emojiOn = !window.emojiOn;
+            }
+        });
 
         window.spawnEmoji = function(id)
         {
+            if (!window.emojiOn) { return; }
             if (inCooldown) { return; }
             inCooldown = true;
             setTimeout(()=>{inCooldown = false},100);
