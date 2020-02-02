@@ -101,6 +101,7 @@ async function compileEmoji()
   var emoji = {};
   for (const i in srcFiles) {
     var fileName = srcFiles[i];
+    if (fileName.startsWith('.')) { continue; }
     var key = fileName.replace(/\.png$/,'');
     emoji[key] = '/emoji/'+fileName;
   }
@@ -109,7 +110,7 @@ async function compileEmoji()
 
 app.post('/emoji', jsonBodyParser,function(req,res){
   broadcast(req.body);
-  res.send(200);
+  res.sendStatus(200);
 });
 
 app.listen(PORT, () => {
