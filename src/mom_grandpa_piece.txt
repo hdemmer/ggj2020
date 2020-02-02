@@ -1,0 +1,8 @@
+
+CHAR: Mom_01
+Mom: “Oh, I doubt that.“
+
+SCENE: black
+CHAR:
+
+GOTO: home

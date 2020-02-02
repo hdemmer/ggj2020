@@ -4,6 +4,8 @@ Sammy: “We talked, mom. And I think we need to talk as well.“
 
 CHAR: Mom_01
 
+WAIT: 2000
+
 CHAR: Sammy_01
 Sammy: “Hey! For once in your life listen!“
 
