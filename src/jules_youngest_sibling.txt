@@ -20,10 +20,11 @@ CHAR: Sammy_01
 Sammy: "She did when you moved out. I did."
 
 CHAR: Sibling_02
-Jules: "I think my class is about to start ..."
+Jules: "I ... I think my class is about to start ..."
 
 CHAR: Sammy_01
-Sammy: "Can you be not cold. For once? Please, Jules."
+Sammy: "Don't be cold, Jules. For once."
+Sammy: "Please."
 
 CHAR: Sibling_02
 
@@ -34,6 +35,7 @@ SCENE: black
 WAIT: 1500
 
 SCENE: Sibling_Cry
+CHAR: 
 
 WAIT:
 
