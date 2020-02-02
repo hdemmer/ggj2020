@@ -44,6 +44,7 @@ function Game(gameDiv, gameData, state)
     }
     const SCENE = 'scene';
     const CHAR = 'char';
+    const CHAR2 = 'char2';
 
     function evalDotCommand(cmd, param)
     {
@@ -123,6 +124,11 @@ function Game(gameDiv, gameData, state)
             var layerName = param;
             showLayer(CHAR,layerName);
             advance();
+        } else if (cmd == 'CHAR2')
+        {
+            var layerName = param;
+            showLayer(CHAR2,layerName);
+            advance();
         } else if (cmd == 'MUSIC') {
             playMusic(param);
             advance();
@@ -179,6 +185,16 @@ function Game(gameDiv, gameData, state)
 
     function showLayer(group,name)
     {
+        var img = null;
+        if (name)
+        {
+            img = layersDiv.querySelector('#'+name);
+            if (!img) {
+                console.error('IMAGE NOT FOUND: ' + name);
+                return;
+            }
+        }
+
         layers.forEach((l)=>{
             // console.log('hide: ' + l.id)
             var cl = l.classList;
@@ -189,11 +205,6 @@ function Game(gameDiv, gameData, state)
         });
         if (name)
         {
-            var img = layersDiv.querySelector('#'+name);
-            if (!img) {
-                console.error('IMAGE NOT FOUND: ' + name);
-                return;
-            }
             var icl = img.classList;
             icl.add(group);
             icl.remove('hidden');

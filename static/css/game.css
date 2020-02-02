@@ -62,6 +62,11 @@ body
     z-index: 150;
 }
 
+.char2
+{
+    z-index: 151;
+}
+
 .options
 {
     background-color:rgb(0,0,0,0.7);
