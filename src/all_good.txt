@@ -3,3 +3,6 @@ CHAR:
 
 WAIT:
 
+SCENE: Credits
+
+WAIT:

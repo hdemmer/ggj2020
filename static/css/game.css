@@ -29,8 +29,21 @@ body
 .loading .title
 {
     position: absolute;
-    top: 540px;
+    top: 440px;
     left: 700px;
+}
+
+.loading .splash
+{
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
+
+.splash
+{
+    font-family: 'Griffy', cursive;
+    font-size: 500%;
 }
 
 .game
