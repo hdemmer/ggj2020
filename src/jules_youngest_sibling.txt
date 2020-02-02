@@ -10,21 +10,35 @@ CHAR: Sibling_02
 WAIT: 2000
 
 CHAR: Sammy_01
-Sammy: "You took dad's yelling. Grandpa's. Even mom's."
+Sammy: "You took dad's yelling. Grandpa's..."
 Sammy: "And you never cried."
 
 CHAR: Sibling_02
-Jules: "No ..."
+Jules: "No ... Mom wouldn't let me."
+
+CHAR: Sammy_01
+Sammy: "She did when you moved out. I did."
+
+CHAR: Sibling_02
+Jules: "I think my class is about to start ..."
+
+CHAR: Sammy_01
+Sammy: "Can you be not cold. For once? Please, Jules."
+
+CHAR: Sibling_02
+
+WAIT: 2000
 
 SCENE: black
 
-WAIT: 800
+WAIT: 1500
 
 SCENE: Sibling_Cry
 
 WAIT:
 
 SCENE: black
+CHAR: 
 
 WAIT: 500
 
