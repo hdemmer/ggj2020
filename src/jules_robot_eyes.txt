@@ -1,7 +1,7 @@
 CHAR: Sibling_03
 Jules: "Damn, I think you're right. Why the heck would he ..."
 
-WAIT: 500
+WAIT: 1000
 
 Jules: "Is this some secret military stuff?"
 

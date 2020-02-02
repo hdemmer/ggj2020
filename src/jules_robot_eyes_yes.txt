@@ -9,7 +9,7 @@ SCENE: white
 
 CHAR: Sammy_01
 
-WAIT: 500
+WAIT: 1000
 
 CHAR: Sibling_leave
 

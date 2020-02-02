@@ -7,7 +7,7 @@ Sammy: “What about Jules?”
 
 CHAR: Grandpa_01
 
-WAIT: 800
+WAIT: 1000
 
 CHAR: Sammy_01
 Sammy: “What about me?”
