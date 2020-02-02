@@ -8,6 +8,6 @@ Mom: “Now. Go play something.“
 SCENE: black
 CHAR:
 
-WAIT: 800
+WAIT: 1000
 
 GOTO: home

@@ -2,7 +2,7 @@ CHAR: Grandpa_01
 Grandpa: “Well she chose wrong!”
 
 SCENE: black
-WAIT: 300
+WAIT: 1000
 SCENE: Grandpa_Backround
 
 Grandpa: “Uh. That's my meds kicking in.”
@@ -11,11 +11,11 @@ Grandpa: “You better go.”
 
 CHAR:
 
-WAIT: 500
+WAIT: 1000
 
 CHAR: Sammy_01
 
-WAIT: 500
+WAIT: 1000
 
 CHAR: Grandpa_leave
 

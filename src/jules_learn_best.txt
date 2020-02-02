@@ -7,6 +7,6 @@ Sammy: "No. I didn't think so."
 SCENE: black
 CHAR:
 
-WAIT: 800
+WAIT: 1000
 
 GOTO: home
