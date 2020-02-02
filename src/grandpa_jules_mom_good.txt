@@ -13,7 +13,7 @@ WAIT:500
 Grandpa nods silently.
 
 Grandpa: “Despite everything.“
-Grandpa: “Damn, there's a lot of him in you.“
+Grandpa: “Damn, I see him in you. The good side. The good side.“
 
 WAIT: 1000
 

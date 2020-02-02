@@ -1,11 +1,12 @@
 
 CHAR: Sammy_01
-SAMMY: “I know dad left you a piece of his robot.”
+Sammy: “Grandpa ...."
+Sammy: “I know dad left you a piece of his robot.”
 
 CHAR: Grandpa_01
-GRANDPA: “And if he did?”
+Grandpa: “And if he did?”
 
 CHAR: Sammy_01
-“Jules gave me hers.”
+Sammy: “Jules gave me hers.”
 
 GOTO: grandpa_jules_piece
