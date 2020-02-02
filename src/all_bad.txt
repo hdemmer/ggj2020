@@ -10,3 +10,9 @@ WAIT:
 SCENE: Credits
 
 WAIT:
+
+SCENE: black
+
+WAIT:
+
+The End ... But it doesn't have to be.

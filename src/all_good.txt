@@ -6,3 +6,7 @@ WAIT:
 SCENE: Credits
 
 WAIT:
+
+SCENE: black
+
+Thanks for playing!
