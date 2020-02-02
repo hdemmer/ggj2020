@@ -2,17 +2,20 @@ CHAR: Sibling_01
 Jules: "Then what is it?"
 
 CHAR: Sammy_01
-"I know you hated him. Hated me too, right?"
+"I know you hated dad. Hated me too, right? 'Cause we were close."
 
 CHAR: Sibling_02
 Jules: "Uh ..."
 
 CHAR: Sammy_01
-Sammy: "I haven't cried since he died."
+Sammy: "I know you think I'm a crybaby, but I haven't once cried since he died."
 
 CHAR: Sibling_01
-Jules: "I didn't want to. I never wanted to cry."
-"I ..."
+Jules: "I ..."
+
+CHAR: Sammy_01_smile
+Sammy: "It's okay, though ..."
+Sammy: "It's okay."
 
 SCENE: Sibling_Cry
 CHAR:
@@ -30,6 +33,6 @@ SHOWDOT:
 WAIT: 1000
 SET: JULES_GOOD
 SHOWDOT:
-WAIT: 1000
+WAIT:
 
 GOTO: home

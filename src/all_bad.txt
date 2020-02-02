@@ -4,7 +4,7 @@ WAIT: 1000
 SET: GRANDPA
 SET: GRANDPA_STEAL
 SHOWDOT:
-WAIT: 1000
+WAIT:
 
 SCENE: Mediocre_Ending
 CHAR:
@@ -13,14 +13,10 @@ If you're all I've left of my family ...
 
 I'm okay with it.
 
-WAIT:
-
 SCENE: Credits
 
 WAIT:
 
 SCENE: black
-
-WAIT:
 
 The End ... But it doesn't have to be.

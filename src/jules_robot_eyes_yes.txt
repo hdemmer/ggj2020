@@ -1,9 +1,9 @@
 CHAR: Sibling_02
 Jules: "So ... Ahem ... Jewelry, eh?"
-"Not my style. You can have 'em."
+Jules: "Not my style. You can have 'em."
 
 CHAR: Sibling_01
-"Well, I'm off for class."
+Jules: "Well, I'm off for class."
 
 SCENE: white
 
@@ -25,6 +25,6 @@ WAIT: 1000
 SET: JULES
 SET: JULES_STEAL
 SHOWDOT:
-WAIT: 1000
+WAIT:
 
 GOTO: home

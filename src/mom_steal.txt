@@ -1,0 +1,20 @@
+
+CHAR: Sammy_01_mad
+
+WAIT: 2000
+
+CHAR: Mom_leave
+
+WAIT:
+
+SCENE: black
+CHAR:
+
+SHOWDOT:
+WAIT: 1000
+SET: MOM
+SET: MOM_STEAL
+SHOWDOT:
+WAIT:
+
+GOTO: home

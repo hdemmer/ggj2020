@@ -12,7 +12,7 @@ Sammy: “And how come you never showed him?”
 CHAR: Grandpa_01
 Grandpa: “I tried to. But after the war I trapped all the hurt inside. I tried not to get attached to someone again so I don't have to feel this pain of losing someone close to me. But now that your dad is gone, it hurts so much. I will never see my boy again. And I can't make up for all the times I missed to tell him, how much I loved him. This robot heart is the only thing I have. So I can't give it to you. I am sorry.” 
 
-CHAR: Sammy_01
+CHAR: Sammy_01_smile
 Sammy: “But… it isn't the only thing. You still have me. I can tell you all the stories he told me about you. Tell you, how much he loved you. You don't have to be afraid to show others, how you feel.”
 
 CHAR: Grandpa_01

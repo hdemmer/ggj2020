@@ -1,4 +1,4 @@
-CHAR: Sammy_01
+CHAR: Sammy_01_mad
 Sammy: “You're right...”
 
 CHAR:

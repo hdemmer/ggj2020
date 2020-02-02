@@ -9,7 +9,7 @@ CHAR: Grandpa_01
 Grandpa: “I never told him how it was.“
 Grandpa: “Maybe it wouldn't have changed anything.“
 
-CHAR: Sammy_01
+CHAR: Sammy_01_smile
 Sammy: It does for me ...“
 
 WAIT: 1000

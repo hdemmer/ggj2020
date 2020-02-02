@@ -1,7 +1,7 @@
 CHAR: Mom_02
 Mom: “Well, Sammy. I promised myself not to ever talk to him again.“
 
-CHAR: Sammy_01
+CHAR: Sammy_01_mad
 Sammy: “Well, you don't have to anymore.“
 
 Sammy: “I ...“
@@ -9,7 +9,8 @@ Sammy: “I ...“
 CHAR: Mom_02
 Mom: “Good. Glad we had that talk.“
 
-SCENE: black
-CHAR:
+CHAR: Sammy_01
 
-GOTO: home
+OPTIONS:
+→ No point talking to her. There never was.|home
+→ Just take the piece. Mom doesn't care.|mom_steal

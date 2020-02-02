@@ -13,7 +13,7 @@ CHAR:
 
 WAIT: 1000
 
-CHAR: Sammy_01
+CHAR: Sammy_01_mad
 
 WAIT: 1000
 

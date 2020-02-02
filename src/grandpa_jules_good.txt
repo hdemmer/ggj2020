@@ -1,17 +1,14 @@
-CHAR: Sammy_01
+CHAR: Sammy_01_smile
 Sammy: “Grandpa! I made up with Jules.“
 
 DOT_MOM_GOOD: grandpa_jules_mom_good
 DOT_MOM_STEAL: grandpa_oneone
 
 CHAR: Grandpa_01
-Grandpa: “What about your mother?“
+Grandpa: “Did you tell your mother?“
 
 CHAR: Sammy_01
-Sammy: “I know you think dad was never good enough for her.“
-
-CHAR: Grandpa_01
-Grandpa: “No. He wasn't.“
+Sammy: “I ... I should.“
 
 SCENE: black
 CHAR:

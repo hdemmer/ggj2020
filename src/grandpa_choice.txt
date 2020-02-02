@@ -1,5 +1,0 @@
-
-OPTIONS:
-→ “Why are always so callous?”|grandpa_good_ending
-→ “This is useless. Dad should have given this to me from the start.”|grandpa_steal
-→ “You know what! Never mind.”|home
