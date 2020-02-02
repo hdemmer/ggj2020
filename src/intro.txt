@@ -1,8 +1,21 @@
 SCENE: start_backdrop
 
+WAIT: 1000
+
+CHAR: DOT_Head
+
+WAIT: 1000
+
+CHAR2: DOT_Start
+
 WAIT:
 
 SCENE: black
+
+CHAR:
+CHAR2:
+
+WAIT: 1000
 
 I was alone with my father when he died.
 
@@ -14,7 +27,7 @@ WAIT:
 
 Sammy: "What did you do, dad?"
 Dad: "I screwed up, Sammy. I screwed up."
-"All the time I should have ..."
+Dad: "All the time I should have ..."
 
 SCENE: black
 
@@ -22,7 +35,7 @@ SCENE: Intro_01_B
 
 WAIT: 2000
 
-Sammy: Dad ... Dad?
+Sammy: "Dad ... Dad?"
 
 SCENE: black
 
@@ -33,7 +46,7 @@ I found it days later with a note in his handwriting.
 SHOWDOT:
 
 Dad: "This is DOT. Well ... part of it."
-"I gave a piece each to my father, my ex-wife, and my two children."
+Dad: "I gave a piece each to my father, my ex-wife, and my two children."
 
 SCENE: black
 
